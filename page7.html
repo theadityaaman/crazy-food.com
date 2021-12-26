@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html ng-app="" >
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossoriscript src="https://kit.fontawesome.com/a076d05399.js" crossorigigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+<style type="text/css">
+
+      #img{
+      height:32em;
+      width:100%;
+      text-align:center;
+      text-align-last:center;
+      box-shadow:0px 0px 0px 2px black;
+      animation-name:images;
+      animation-duration:9s;
+      animation-iteration-count:infinite;
+      }
+      @keyframes images{
+      0%{
+      background-image:url('https://i.ibb.co/fFsyBkB/images-1.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      10%{
+      background-image:url('https://i.ibb.co/fFsyBkB/images-1.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      25%{
+      background-image:url('https://i.ibb.co/dpLVmk2/images-4.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      50%{
+      background-image:url('https://i.ibb.co/QXW5GS6/images-3.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      75%{
+      background-image:url('https://i.ibb.co/sgVzNB8/images-2.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      90%{
+      background-image:url('https://i.ibb.co/VJF01pB/images-5.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      100%{
+      background-image:url('https://i.ibb.co/VJF01pB/images-5.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      }
+      
+      
+      #btn{
+      float:right;
+      margin-left:-2%;
+      margin-right:2%;
+      font-size:30px;
+      color:red;
+      margin-top:3%;
+      border-right-style:outset;
+      width:15%;
+      text-align:center;
+      }
+      .btn{
+      float:left;
+      margin-top:2%;
+      font-size:35px;
+      font-weight:bold;
+      }
+      a{
+      text-decoration:none;
+      color:red;
+      }
+      
+      font{
+      font-size:50px;
+      }
+      
+      #btn:hover,a:hover{
+      text-decoration:underline;
+      text-decoration-color:red;
+      color:black;
+      }
+      
+      h1{
+      font-family:fantasy;
+      font-size:80px;
+      font-weight:bold;
+      }
+      p{
+      font-family:monospace;
+      font-size:30px;
+      font-weight:bold;
+      }
+      #button{
+      height:5%;
+      width:23%;
+      background-color:#00ffcc;
+      font-size:28px;
+      margin-left:40%;
+      margin-top:-20%;
+      text-align:center;
+      border-radius:20px;
+      color:black;
+      text-decoration:none;
+      }
+      
+      #button:hover{
+      animation-name:rotate;
+      animation-duration:.6s;
+      animation-iteration-count:1;
+      }
+      @keyframes rotate{
+      50%{
+      transform:rotatey(25deg);
+      }
+      }
+      
+      h2{
+      font-size:42px;
+      text-decoration:underline;
+      text-align:center;
+      }
+      h2::first-letter{
+      font-size:2em;
+      text-decoration:none;
+      color:#00ff33;
+      text-shadow:1px 0px 2px black;
+      }
+      
+      #about{
+      font-size:30px;
+      font-family:Arial,sans-serif;
+      font-weight:normal;
+      width:400px;
+      padding-left:10px;
+      transition-duration:1s;
+      }
+      #about-image{
+      height:350px;
+      width:400px;
+      box-shadow:0px 0px 0px 2px black;
+      float:right;
+      margin-top:-39%;
+      margin-right:3%;
+      background-image:url('https://i.ibb.co/V06Dd87/images-7.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      
+      p1{
+      font-size:15px;
+      font-family:monospace;
+      margin-left:3.5%;
+      }
+      
+      #menu-image-1 ,#menu-image-2 ,#menu-image-3 ,#menu-image-4 ,#menu-image-5 ,#menu-image-6{
+      height:330px;
+      width:280px;
+      box-shadow:0px 0px 0px 2px black;
+      float:left;
+      margin-left:3%;
+      margin-top:3%;
+      font-size:30px;
+      }
+      footer{
+      text-align:center;
+      margin-top:103%;
+      background-color:white;
+      }
+      #menu-image-1 {
+      background-image:url('https://i.ibb.co/QnXBXc1/images-9.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #menu-image-2 {
+      background-image:url('https://i.ibb.co/wyVQfnm/images-10.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #menu-image-3 {
+      background-image:url('https://i.ibb.co/hDc9DwB/download.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #menu-image-4 {
+      background-image:url('https://i.ibb.co/HgXGsZJ/images-11.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #menu-image-5 {
+      background-image:url('https://i.ibb.co/C1wJrvF/images-8.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #menu-image-6 {
+      background-image:url('https://i.ibb.co/djD3ZTC/download-1.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      
+      #view_button{
+      text-align:center;
+      font-family:serif;
+      font-size:33px;
+      width:200px;
+      height:45px;
+      background-color:#00ffcc;
+      border-radius:25px;
+      margin-left:40%;
+      box-shadow:0px 0px 0px 2px black;
+      }
+      
+  /* view-image */
+  
+      #view-image-1 ,#view-image-2 ,#view-image-3 ,#view-image-4 ,#view-image-5 ,#view-image-6{
+      height:330px;
+      width:280px;
+      box-shadow:0px 0px 0px 2px black;
+      float:left;
+      margin-left:3%;
+      margin-top:3%;
+      font-size:30px;
+      }
+      #view-image-1 {
+      background-image:url('https://i.ibb.co/p3cTk1m/images-12.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #view-image-2 {
+      background-image:url('https://i.ibb.co/Bfk2VRv/download-2.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #view-image-3 {
+      background-image:url('https://i.ibb.co/gF9YGDL/images-13.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #view-image-4 {
+      background-image:url('https://i.ibb.co/x3Xh888/images-14.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #view-image-5 {
+      background-image:url('https://i.ibb.co/4RF1Pgw/download-3.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      #view-image-6 {
+      background-image:url('https://i.ibb.co/WcFnXLM/images-15.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 87%;
+      }
+      
+      
+      
+      #main-view-images{
+      display:none;
+      }
+      
+      #kitchen-expert{
+      height:510px;
+      width:430px;
+      float:left;
+      margin-left:3%;
+      margin-top:2%;
+      box-shadow:0px 0px 0px 2px black;
+      overflow:hidden;
+      }
+      #sub-kitchen-expert{
+      width:100%;
+      height:14%;
+      background-color:yellow;
+      margin-top:105%;
+      text-align:center;
+      font-size:30px;
+      display:none;
+      transition-duration:2s;
+      }
+      #kitchen-expert:hover #sub-kitchen-expert{
+      display:block;
+      }
+      
+      .kitchen-expert-image-1 {
+      background-image:url('https://i.ibb.co/09XYp4b/images-16.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      .kitchen-expert-image-2 {
+      background-image:url('https://i.ibb.co/TR7m0nK/images-17.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      .kitchen-expert-image-3 {
+      background-image:url('https://i.ibb.co/3sr8y6t/images-18.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      .kitchen-expert-image-4 {
+      background-image:url('https://i.ibb.co/JvbVR82/images-19.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      }
+      
+      
+      #comment-background-image{
+      background-image:url('https://i.ibb.co/rkCGVRk/images-20.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      height:700px;
+      width:100%;
+      }
+      #comment{
+      height:500px;
+      width:300px;
+      box-shadow:0px 0px 0px 2px black;
+      float:left;
+      background-color:#797d7f;
+      margin-top:9%;
+      margin-left:1.5%;
+      font-size:22px;
+      overflow:scroll;
+      text-align:center;
+      color:white;
+      
+      }
+      
+      #comment:hover{
+      margin-top:2%;
+      background-color:white;
+      color:black;
+      transition-duration:.5s;
+      }
+      
+      
+      #comment-image-1 ,#comment-image-2 ,#comment-image-3 {
+      height:120px;
+      width:120px;
+      box-shadow:0px 0px 0px 2px black;
+      margin-top:10%;
+      margin-left:32%;
+      border-radius:50%;
+      }
+     #comment-image-1 {
+     background-image:url('https://i.ibb.co/Mksh46Q/images-21.jpg');
+     background-repeat:no-repeat;
+     background-size:110% 110%;
+     }
+     
+     #comment-image-2 {
+     background-image:url('https://i.ibb.co/HXBdCb6/images-22.jpg');
+     background-repeat:no-repeat;
+     background-size:110% 110%;
+     }
+     #comment-image-3 {
+     background-image:url('https://i.ibb.co/Zg31Rhd/images-23.jpg');
+     background-repeat:no-repeat;
+     background-size:110% 110%;
+     }
+     
+     #contact{
+     height:700px;
+     width:500px;
+     box-shadow:9px 5px 10px #a6acaf;
+     margin-left:23%;
+     background-color:#d0d3d4;
+     }
+     input{
+     margin-top:7%;
+     width:90%;
+     height:7%;
+     font-size:30px;
+     border:none;
+     border-bottom:2px solid black;
+     border-left:0px white;
+     }
+     #contact-btn{
+     font-size:30px;
+     background-color:#56d68d;
+     text-align:center;
+     margin-top:28%;
+     width:25%;
+     margin-left:40%;
+     box-shadow:0px 0px 0px 2px black;
+     }
+     
+     #term-policy{
+     width:100%;
+     height:350px;
+     font-size:30px;
+     background-color:gray;
+     text-align:center;
+     }
+     
+     .ui-dialog{
+     z-index:-1;
+     width:200px;
+     height:20%;
+     background-color:red;
+     }
+     legend{
+     font-size:26px;
+     }
+     section{
+     transition-duration:1s;
+     }  
+     body{
+     background-color:{{color}};
+     }
+     #input{
+     width:20%;
+     }
+     
+     
+        
+        
+        
+        
+        
+        
+        
+           
+      
+      #refersh{
+      height:50px;
+      width:20%;
+      }
+</style>
+
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/trontastic/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   
+
+<script>
+
+    
+    function x(){
+    location.reload();
+    }
+    
+    //alert("Made by ADITYA AMAN");
+    
+    $(function(){
+    $("#view_button").click(function(){
+    $("#main-view-images").css({"display":"block"});
+    $("#view_button").css({"display":"none"});
+    $("#main-view-images").css({"margin-top":"-12%"});
+    });
+    });
+    
+    var a=prompt("enter your name")
+    alert("welcome : " +a);
+    
+    
+   /* $(function(){
+    $("#dialog").dialog({
+    
+    show:{
+    effect:"fold",
+    duration:1000
+    }
+    });
+    });
+    
+    */
+    function a(){
+    open("https://seupload.com/2Ti/popcorn.mp3");
+    }
+    
+</script>
+</head>
+<body>
+
+<div class="btn" >F <font>&#x1F354&#x1F36A</font> D</div>
+
+<div id="main-btn">
+<div id="btn"><a href="#comment-us">Comment</a></div>
+<div id="btn"> <a href="#contact-us">Contact</a></div>
+<div id="btn"> <a href="#about"> About</a></div>
+<div id="btn"> <a href="#">Home</a></div>
+</div>
+
+<br>
+
+<div id="img">
+     <h1>Crazy Food</h1>
+     <p>Food is the ultimate pacifier. <br> 
+     I feel forgive anyone after a scrumptious meal.</p>
+</div>
+<div id="button"><a href="#menu">OUR MENU</a></div>
+
+<br><br><br>
+
+    <!-- About us -->
+    
+<section id="about"> 
+<h2>About us</h2>
+<div id="about" >Tandoori Chicken is a healthy dish thanks to its 
+     lean meat amount and the cooking technique. It was
+     traditionally cooked in the clay tandoor. ... 
+     The grilling method makes tandoori chicken healthy as
+     it doesn't require much oil and retains the proteins.
+     The chicken breast is marinated with yogurt before grilling.
+</div>
+</section>
+
+<div id="about-image"> </div>
+
+<br>
+   <!-- menu -->
+
+<section id="menu"> 
+<h2>Our menu</h2>
+<p1>BEST CRAZY and DIET FOOD IN NEW-DELHI, INDIA</p1>
+<br>
+<div id="menu-image-1"><footer> -Salad- </footer></div> 
+<div id="menu-image-2"><footer> -Chole Bhature- </footer> </div> 
+<div id="menu-image-3"><footer> -Samosa-</footer></div> 
+<div id="menu-image-4"><footer> -Choco Pastry- </footer></div>
+<div id="menu-image-5"><footer> -Chicken tanduri- </footer></div> 
+<div id="menu-image-6"><footer> -Sweets- </footer></div> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="view_button"> View All</div> 
+
+    <!-- view all -->
+
+<br>
+
+<div id="main-view-images"> 
+<div id="view-image-1"><footer> -Pasta- </footer> </div> 
+<div id="view-image-2"><footer> -Chop Suey- </footer> </div> 
+<div id="view-image-3"><footer> -Cuban sandwich- </footer> </div> 
+<div id="view-image-4"><footer> -Fajitas- </footer> </div> 
+<div id="view-image-5"><footer> -Pizza- </footer> </div> 
+<div id="view-image-6"><footer> -Burger- </footer> </div> 
+</div>
+</section>
+
+<br>
+
+<!-- Kitchen expert images -->
+
+<h2>Our Kitchen Experts </h2>
+<div id="kitchen-expert" class="kitchen-expert-image-1 " ><div id="sub-kitchen-expert"> <tt> Farrokh Khambata </tt> </div> </div>
+<div id="kitchen-expert" class="kitchen-expert-image-2 "><div id="sub-kitchen-expert"> <tt>Chef Damodharan </tt></div> </div>
+<div id="kitchen-expert" class="kitchen-expert-image-3 "><div id="sub-kitchen-expert"><tt> Anjum Anand </tt> </div> </div>
+<div id="kitchen-expert" class="kitchen-expert-image-4 "><div id="sub-kitchen-expert"> <tt>Aarti Sequeira </tt> </div> </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<section id="comment-us">
+<h2> Comment Us</h2>
+
+<br>
+
+<div id="comment-background-image">
+     <div id="comment"><div id="comment-image-1"></div> <br><br>
+     <p2> "Always a great experience"
+     "Love the changes"
+     "Ambience is very comfortable" "Love (the) new menu"
+     "Fresh, authentic Italian food"
+     Excellent food & outstanding service"
+     Our favourite local
+     "Always great"
+     "Well done"
+     "Great food & service,
+     treated with best food of all the places we have been </p2>
+  
+  
+</div>
+<div id="comment">
+      <div id="comment-image-2"></div><br><br>
+      <p2> Hello!,
+      
+      We are sorry to hear you did not 
+      enjoy your visit. We will point 
+      out that both food dishes you describe
+       do not resemble anything currently or 
+       historically on our menu.
+      Thank you</p2>
+      
+      
+</div>
+ <div id="comment">
+      <div id="comment-image-3"> </div> <br><br>
+      <p2>Had a carrot starter dish that must
+       of had an entire pot of salt in and was
+       inedible, second visit had a kale salad
+       which was a plate of dry kale with
+       nothing else. Not a nice experience, 
+       very disappointed.</p2>
+      
+</div>
+</div>
+</section>
+
+<br>
+
+<section id="contact-us">
+<h2>Contact us </h2>
+<div id="contact">
+      <fieldset>
+      <legend>name
+      </legend>
+     <input placeholder=" " >
+     </fieldset>
+     <fieldset>
+     <legend>ph. Number</legend>
+     <input placeholder=" ">
+     </fieldset>
+     <fieldset>
+     <legend>Message</legend>
+     <input placeholder=" " >
+     </fieldset>
+     
+     <div id="contact-btn">Send</div>
+</div>
+</section>
+
+
+<br><br><br>
+
+<div id="term-policy"> 
+
+<br>
+     Disclaimer | Privacy Policy | Term of Services |Sitemap
+ 
+<br><br><br>
+ 
+    <b> &#169 All rights reserve .Inc Terms + Privacy</b>
+
+<br>
+
+    <name>Made with &#9733 &#9829 -Aditya-  &  -Aman-</name>
+    
+ </div>
+ 
+ <br>
+ 
+ <!--<div id="dialog" ><p>Hey, I am Aditya Aman </p></div>
+ -->
+
+
+<br><br><br>
+
+<input id="input"  ng-model="color">
+{{"color : "+ color}}
+
+<button id="refersh" onclick="x()">Refersh </button>
+</body>
+</html>
